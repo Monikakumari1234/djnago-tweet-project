@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="text-center">Are your sure to delete this record ?</h1>
+<form method="POST">
+  {% csrf_token %}
+  <div class="text-center">
+  <button class="btn btn-danger " type="submit">Delete</button>
+  <a href="{% url 'tweet_list' %}" class="btn btn-secondary "> Cancel </a>
+  </div>
+</form>
+  {% endblock %}
+</form>
